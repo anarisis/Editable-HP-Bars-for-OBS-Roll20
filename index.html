@@ -1,0 +1,170 @@
+<head>
+
+
+
+<script>function func() {
+    var x = document.getElementById("firstbar");		  
+    
+    x.value = document.getElementById("value").value;
+}
+function secondbar() {
+    var x = document.getElementById("secondbar");		  
+    
+    x.value = document.getElementById("value2").value;
+}
+    function thirdbar() {
+    var x = document.getElementById("thirdbar");		  
+    
+    x.value = document.getElementById("value3").value;
+}
+    function fourthbar() {
+    var x = document.getElementById("fourthbar");		  
+    
+    x.value = document.getElementById("value4").value;
+}
+    function fifthbar() {
+    var x = document.getElementById("fifthbar");		  
+    
+    x.value = document.getElementById("value5").value;
+}
+    function sixthbar() {
+    var x = document.getElementById("sixthbar");		  
+    
+    x.value = document.getElementById("value6").value;
+}    
+    </script>
+
+<style>
+progress {
+     position: relative;
+  border: none;
+  width: 315px;
+  height: 22px;
+  background: #02ba80;
+}
+
+progress {
+  color: #02ba80;
+}
+
+progress::-webkit-progress-value {
+  background: #02ba80;
+}
+
+progress::-moz-progress-bar {
+  background: #02ba80;
+}
+
+progress::-webkit-progress-value {
+  background: #02ba80;
+}
+
+progress::-webkit-progress-bar {
+  background: #6d4c4c;
+}
+    progress#firstbar:after {
+        color:white;
+        width:100%; text-align:center;
+        position:absolute; top:3;;
+        display: block;
+  content: attr(value)'/25'/* BAR1 HEALTH MAXIMUM */;
+}
+    
+        progress#secondbar:after {
+        color:white;
+        width:100%; text-align:center;
+        position:absolute; top:3;;
+        display: block;
+  content: attr(value)'/30'/* BAR2 HEALTH MAXIMUM */;
+}
+    
+            progress#thirdbar:after {
+        color:white;
+        width:100%; text-align:center;
+        position:absolute; top:3;;
+        display: block;
+  content: attr(value)'/15'/* BAR3 HEALTH MAXIMUM */;
+}
+            progress#fourthbar:after {
+        color:white;
+        width:100%; text-align:center;
+        position:absolute; top:3;;
+        display: block;
+  content: attr(value)'/15'/* BAR4 HEALTH MAXIMUM */;
+}
+            progress#fifthbar:after {
+        color:white;
+        width:100%; text-align:center;
+        position:absolute; top:3;;
+        display: block;
+  content: attr(value)'/15'/* BAR5 HEALTH MAXIMUM */;
+}
+            progress#sixthbar:after {
+        color:white;
+        width:100%; text-align:center;
+        position:absolute; top:3;;
+        display: block;
+  content: attr(value)'/15'/* BAR6 HEALTH MAXIMUM */;
+}
+    </style>
+
+</head>
+<body>
+    <div style="padding-bottom:20px;">
+        <input type = 'button' value = 'CLICK ME TO KEY BACKGROUND' onClick = 'changeColor()'>
+    <script>
+        function changeColor(){
+            var body = document.querySelector('body');
+
+            if(body.style.backgroundColor == ''){
+                body.style.backgroundColor = '#00ff00';
+            }
+            else{
+                body.style.backgroundColor = '';
+            }
+        }
+</script>
+   </div>
+First Character
+<div>
+<!–– BAR1 HEALTH set all following 'max' and 'value' numbers to the first character's maximum ––>
+    <input type="number" id="value" max="25" step="1" value="25">
+<button onclick="func()">Change</button>
+   <progress style="height:22px; width:315px;" id="firstbar" value="25" max="25"></progress></div>
+
+     <br> Second Character
+<div>
+<!–– BAR2 HEALTH set all following 'max' and 'value' numbers to the second character's maximum ––>
+<input type="number" id="value2" max="30" step="1" value="30">
+<button onclick="secondbar()">Change</button>
+<progress style="height:22px; width:315px"  id="secondbar" value="30" max="30"></progress>
+</div>
+         <br> Third Character
+<div>
+<!–– BAR3 HEALTH set all following 'max' and 'value' numbers to the third character's maximum ––>
+<input type="number" id="value3" max="15" step="1" value="15">
+<button onclick="thirdbar()">Change</button>
+<progress style="height:22px; width:315px"  id="thirdbar" value="15" max="15"></progress>
+</div>
+         <br> Fourth Character
+<div>
+<!–– BAR4 HEALTH set all following 'max' and 'value' numbers to the fourth character's maximum ––>
+<input type="number" id="value4" max="15" step="1" value="15">
+<button onclick="fourthbar()">Change</button>
+<progress style="height:22px; width:315px"  id="fourthbar" value="15" max="15"></progress>
+</div>
+         <br> Fifth Character
+<div>
+<!–– BAR5 HEALTH set all following 'max' and 'value' numbers to the fifth character's maximum ––>
+<input type="number" id="value5" max="15" step="1" value="15">
+<button onclick="fifthbar()">Change</button>
+<progress style="height:22px; width:315px"  id="fifthbar" value="15" max="15"></progress>
+</div>
+         <br> Sixth Character
+<div>
+<!–– BAR5 HEALTH set all following 'max' and 'value' numbers to the sixth character's maximum ––>
+<input type="number" id="value6" max="15" step="1" value="15">
+<button onclick="sixthbar()">Change</button>
+<progress style="height:22px; width:315px"  id="sixthbar" value="15" max="15"></progress>
+</div>
+</body>

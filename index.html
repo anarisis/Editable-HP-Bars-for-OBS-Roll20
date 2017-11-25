@@ -1,36 +1,63 @@
 <head>
-
-
-
 <script>function func() {
     var x = document.getElementById("firstbar");		  
     
     x.value = document.getElementById("value").value;
 }
+                function funcmax() {
+    var x = document.getElementById("firstbar");		  
+    
+    x.max = document.getElementById("max").value;
+}    
 function secondbar() {
     var x = document.getElementById("secondbar");		  
     
     x.value = document.getElementById("value2").value;
 }
+                function secondbarmax() {
+    var x = document.getElementById("secondbar");		  
+    
+    x.max = document.getElementById("max2").value;
+}    
     function thirdbar() {
     var x = document.getElementById("thirdbar");		  
     
     x.value = document.getElementById("value3").value;
 }
+                function thirdbarmax() {
+    var x = document.getElementById("thirdbar");		  
+    
+    x.max = document.getElementById("max3").value;
+}    
     function fourthbar() {
     var x = document.getElementById("fourthbar");		  
     
     x.value = document.getElementById("value4").value;
 }
+                function fourthbarmax() {
+    var x = document.getElementById("fourthbar");		  
+    
+    x.max = document.getElementById("max4").value;
+}    
     function fifthbar() {
     var x = document.getElementById("fifthbar");		  
     
     x.value = document.getElementById("value5").value;
 }
+            function fifthbarmax() {
+    var x = document.getElementById("fifthbar");		  
+    
+    x.max = document.getElementById("max5").value;
+}    
     function sixthbar() {
     var x = document.getElementById("sixthbar");		  
     
     x.value = document.getElementById("value6").value;
+}    
+        function sixthbarmax() {
+    var x = document.getElementById("sixthbar");		  
+    
+    x.max = document.getElementById("max6").value;
 }    
     </script>
 
@@ -67,7 +94,7 @@ progress::-webkit-progress-bar {
         width:100%; text-align:center;
         position:absolute; top:3;;
         display: block;
-  content: attr(value)'/25'/* BAR1 HEALTH MAXIMUM */;
+  content: attr(value)'/' attr(max);
 }
     
         progress#secondbar:after {
@@ -75,7 +102,7 @@ progress::-webkit-progress-bar {
         width:100%; text-align:center;
         position:absolute; top:3;;
         display: block;
-  content: attr(value)'/30'/* BAR2 HEALTH MAXIMUM */;
+  content: attr(value)'/' attr(max);
 }
     
             progress#thirdbar:after {
@@ -83,28 +110,28 @@ progress::-webkit-progress-bar {
         width:100%; text-align:center;
         position:absolute; top:3;;
         display: block;
-  content: attr(value)'/15'/* BAR3 HEALTH MAXIMUM */;
+  content: attr(value)'/' attr(max);
 }
             progress#fourthbar:after {
         color:white;
         width:100%; text-align:center;
         position:absolute; top:3;;
         display: block;
-  content: attr(value)'/15'/* BAR4 HEALTH MAXIMUM */;
+  content: attr(value)'/' attr(max);
 }
             progress#fifthbar:after {
         color:white;
         width:100%; text-align:center;
         position:absolute; top:3;;
         display: block;
-  content: attr(value)'/15'/* BAR5 HEALTH MAXIMUM */;
+  content: attr(value)'/' attr(max);
 }
             progress#sixthbar:after {
         color:white;
         width:100%; text-align:center;
         position:absolute; top:3;;
         display: block;
-  content: attr(value)'/15'/* BAR6 HEALTH MAXIMUM */;
+  content: attr(value)'/' attr(max);
 }
     </style>
 
@@ -124,47 +151,48 @@ progress::-webkit-progress-bar {
             }
         }
 </script>
-   </div>
+ <button onclick="func();funcmax();secondbar();secondbarmax();thirdbar();thirdbarmax();fourthbar();fourthbarmax();fifthbar();fifthbarmax();sixthbar();sixthbarmax();">Update all bars</button>  </div>
+
 First Character
 <div>
-<!–– BAR1 HEALTH set all following 'max' and 'value' numbers to the first character's maximum ––>
-    <input type="number" id="value" max="25" step="1" value="25">
-<button onclick="func()">Change</button>
+    <input type="number" id="value" step="1" value="25">/
+<input type="number" id="max" step="1" value="25">
+<button onclick="func();funcmax();">Change</button>
    <progress style="height:22px; width:315px;" id="firstbar" value="25" max="25"></progress></div>
 
      <br> Second Character
 <div>
-<!–– BAR2 HEALTH set all following 'max' and 'value' numbers to the second character's maximum ––>
-<input type="number" id="value2" max="30" step="1" value="30">
-<button onclick="secondbar()">Change</button>
+<input type="number" id="value2" step="1" value="30">/
+<input type="number" id="max2" step="1" value="30">
+<button onclick="secondbar();secondbarmax();">Change</button>
 <progress style="height:22px; width:315px"  id="secondbar" value="30" max="30"></progress>
 </div>
          <br> Third Character
 <div>
-<!–– BAR3 HEALTH set all following 'max' and 'value' numbers to the third character's maximum ––>
-<input type="number" id="value3" max="15" step="1" value="15">
-<button onclick="thirdbar()">Change</button>
+<input type="number" id="value3" step="1" value="15">/
+<input type="number" id="max3" step="1" value="15">
+<button onclick="thirdbar();thirdbarmax();">Change</button>
 <progress style="height:22px; width:315px"  id="thirdbar" value="15" max="15"></progress>
 </div>
          <br> Fourth Character
 <div>
-<!–– BAR4 HEALTH set all following 'max' and 'value' numbers to the fourth character's maximum ––>
-<input type="number" id="value4" max="15" step="1" value="15">
-<button onclick="fourthbar()">Change</button>
+<input type="number" id="value4" step="1" value="15">/
+<input type="number" id="max4" step="1" value="15">
+<button onclick="fourthbar();fourthbarmax();">Change</button>
 <progress style="height:22px; width:315px"  id="fourthbar" value="15" max="15"></progress>
 </div>
          <br> Fifth Character
 <div>
-<!–– BAR5 HEALTH set all following 'max' and 'value' numbers to the fifth character's maximum ––>
-<input type="number" id="value5" max="15" step="1" value="15">
-<button onclick="fifthbar()">Change</button>
+<input type="number" id="value5" step="1" value="15">/
+<input type="number" id="max5" step="1" value="15">
+<button onclick="fifthbar();fifthbarmax();">Change</button>
 <progress style="height:22px; width:315px"  id="fifthbar" value="15" max="15"></progress>
 </div>
          <br> Sixth Character
 <div>
-<!–– BAR5 HEALTH set all following 'max' and 'value' numbers to the sixth character's maximum ––>
-<input type="number" id="value6" max="15" step="1" value="15">
-<button onclick="sixthbar()">Change</button>
+<input type="number" id="value6" step="1" value="15">/
+<input type="number" id="max6" step="1" value="15">
+<button onclick="sixthbar();sixthbarmax();">Change</button>
 <progress style="height:22px; width:315px"  id="sixthbar" value="15" max="15"></progress>
 </div>
 </body>

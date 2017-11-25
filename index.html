@@ -133,12 +133,15 @@ progress::-webkit-progress-bar {
         display: block;
   content: attr(value)'/' attr(max);
 }
+    input{
+        width:80px;
+    }
     </style>
 
 </head>
 <body>
     <div style="padding-bottom:20px;">
-        <input type = 'button' value = 'CLICK ME TO KEY BACKGROUND' onClick = 'changeColor()'>
+        <button value = 'CLICK ME TO KEY BACKGROUND' onClick = 'changeColor()'>CLICK ME TO KEY BACKGROUND</button>
     <script>
         function changeColor(){
             var body = document.querySelector('body');
